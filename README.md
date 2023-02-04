@@ -1,19 +1,21 @@
-[![Discord](https://img.shields.io/discord/899151012290498620.svg?label=discord&logo=discord)](https://discord.petrus.dev/)
-[![Spigot](https://img.shields.io/spiget/downloads/97889?label=Spigot%20Downloads&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC%2FxhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAAAAAAD%2F0ADi6D86Ruj%2F%2F%2F%2BilASZAAAAAXRSTlMAQObYZgAAAAFiS0dEBfhv6ccAAAAHdElNRQfmBRoTHQ%2BKPgYQAAAAAW9yTlQBz6J3mgAAAFBJREFUCNdljdERgDAIQ8OdAxicgHQCZQH3n0raWn98P7y7QADAYkfHiInFK4yZwLWkTaHy7IPeMupOUkvVFiu5XL3hyLAhRsK%2FzvVlu%2F%2FyAL5yBqQb5SdrAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA1LTI2VDE5OjI5OjEzKzAwOjAw2Eq4fQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNS0yNlQxOToyOToxMyswMDowMKkXAMEAAAAASUVORK5CYII%3D)](https://www.spigotmc.org/resources/97889/)
-
 <p align="center">
   <img src="icon/icon.png" />
 </p>
 
-# PixelmonEconomyBridge
+# PixelmonEconomyBridge (SynxGames Rewrite)
 
-A plugin de that creates a bridge between Pixelmon economy system and Bukkit.
+This is a rewrite of [PixelmonEconomyBridge by EverNife](https://www.spigotmc.org/resources/pixelmoneconomybridge.97889/).
+This plugin removes the EverNife core dependency and removes 1.12.2 support and modernises the plugin.
 
-On bukkit there is no 'EconomyUpdateEvent' so you might need a plugin that has it, like FinalEconomy
+For Synx Games needs, the EverNife core dependency (and support for FinalEconomy) was not important to us, so 
+this has been removed so we can improve maintainability for our servers.
 
-So. In order to use this plugin you need:
+This has been made open-source as the actual logic from the original plugin does not massively change. The package has
+been changed to enforce that this is not a drop-in replacement for the version by EverNife.
 
-+ [Vault Plugin](https://www.spigotmc.org/resources/vault.34315/)
-+ [EverNifeCore Plugin](https://github.com/evernife/EverNifeCore)
-+ Any other economy manager plugin like Essentials, CMI, or the best option for increased performance, [FinalEconomy](https://github.com/evernife/FinalEconomy
-  )
+## Support
+
+No support is provided for this rewrite. Please do not message SynxGames or EverNife for support - you are on your own!
+
+## Dependencies
++ [Vault](https://www.spigotmc.org/resources/vault.34315/)

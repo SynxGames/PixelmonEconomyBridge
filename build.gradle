@@ -1,18 +1,24 @@
 buildscript {
     repositories {
-        jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        mavenCentral()
+        maven {
+            url = "https://maven.minecraftforge.net/"
+        }
+        maven {url = "https://oss.sonatype.org/content/repositories/snapshots"}
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
     }
 }
 
-group 'br.com.finalcraft'
-version '1.0.9'
+plugins {
+    id 'java'
+}
 
-apply plugin: 'java'
-apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: "net.minecraftforge.gradle"
+
+group 'br.com.finalcraft'
+version '1.1.0'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -26,8 +32,6 @@ tasks.withType(JavaCompile) {
 repositories {
     flatDir {
         dirs 'libs'
-        dirs 'C:/Users/Petrus/Desktop/Meus/workshop/workshop/PublicLibs/Bukkit'
-        dirs 'C:/Users/Petrus/Desktop/Meus/workshop/workshop/PublicLibs'
     }
     mavenCentral()
     maven {
@@ -35,30 +39,16 @@ repositories {
         url = 'https://hub.spigotmc.org/nexus/content/groups/public/'
     }
     maven { url 'https://jitpack.io' }
-    maven {
-        url = 'https://maven.petrus.dev/public'
-    }
 }
 
 
 minecraft {
-    version = "1.12.2-14.23.5.2847"
-    runDir = "run"
-
-    mappings = "stable_39"
-    makeObfSourceJar = false
+    mappings channel: 'official', version: '1.16.5'
 }
 
-
 dependencies {
-    compile "com.github.MilkBowl:VaultAPI:1.7"
-
-    compile 'br.com.finalcraft:EverNifeCore:2.0.3'
-    compile 'br.com.finalcraft:FinalEconomy:1.0.3'
-
-    compileOnly name: "Pixelmon-1.12.2-8.3.4-noassets"
-    compileOnly name: "Pixelmon-1.16.5-9.1.0-noassets"
-
-    compile 'org.bukkit:bukkit:1.12.2-R0.1-SNAPSHOT'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
+    compileOnly "com.github.MilkBowl:VaultAPI:1.7"
+    compileOnly name: "Pixelmon-1.16.5-9.1.2-server"
+    compileOnly 'org.bukkit:bukkit:1.12.2-R0.1-SNAPSHOT'
 }

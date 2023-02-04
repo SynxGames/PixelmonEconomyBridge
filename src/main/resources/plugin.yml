@@ -1,7 +1,6 @@
 name: PixelmonEconomyBridge
-version: 1.0.9
-author: EverNife
-main: br.com.finalcraft.pixelmoneconomybridge.PixelmonEconomyBridge
-depend: [ Vault, EverNifeCore ]
-softdepend:  [ FinalEconomy ]
+version: 2.0.0
+author: EverNife, SynxGames
+main: games.synx.pixelmoneconomybridge.PixelmonEconomyBridge
+depend: [ Vault ]
 api-version: 1.13
